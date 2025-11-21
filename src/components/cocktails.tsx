@@ -5,10 +5,12 @@ import gsap from 'gsap';
 export default function Cocktails() {
   useGSAP(() => {
     const parallaxTimeLine = gsap.timeline({
-      trigger: '#cocktails',
-      start: 'top 30%',
-      end: 'bottom 80%',
-      scrub: true
+      scrollTrigger: {
+        trigger: '#cocktails',
+        start: 'top 30%',
+        end: 'bottom 80%',
+        scrub: true
+      }
     });
 
     parallaxTimeLine
