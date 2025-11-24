@@ -98,24 +98,13 @@ export default function Hero() {
       </section>
 
       <div className="video absolute inset-0">
-        {
-          isMobile ? (
-              <video
-            src="/videos/output-mobile.mp4"
-            ref={videoRef}
-            muted
-            playsInline
-            preload="auto"
-          />
-          ) : 
-          <video
-            src="/videos/output.mp4"
-            ref={videoRef}
-            muted
-            playsInline
-            preload="auto"
-          />
-        }
+    		<video
+          ref={videoRef}
+          muted
+          playsInline
+          preload="auto"
+          src="/videos/output.mp4"
+        />
       </div>
     </>
   );
