@@ -6,6 +6,7 @@ import Header from './components/header';
 import Hero from './components/hero';
 import Cocktails from './components/cocktails';
 import About from './components/about';
+import Art from './components/art';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
@@ -16,6 +17,8 @@ export default function App() {
       <Hero />
       <Cocktails />
       <About />
+      <Art />
+      <div className='h-dvh'></div>
     </main>
   );
 };
