@@ -43,8 +43,8 @@ export default function Hero() {
         scrub: true
       }
     })
-      .to('.left-leaf', { y: 200 }, 0)
-      .to('.right-leaf', { y: -200 }, 0);
+      .to('.left-leaf', { y: -200 }, 0)
+      .to('.right-leaf', { y: 200 }, 0); 
 
     // VIDEO PIN + SCRUB
     const startValue = isMobile ? 'top 50%' : 'center 60%';
@@ -98,13 +98,24 @@ export default function Hero() {
       </section>
 
       <div className="video absolute inset-0">
-        <video
-          src="/videos/output.mp4"
-          ref={videoRef}
-          muted
-          playsInline
-          preload="auto"
-        />
+        {
+          isMobile ? (
+              <video
+            src="/videos/output-mobile.mp4"
+            ref={videoRef}
+            muted
+            playsInline
+            preload="auto"
+          />
+          ) : 
+          <video
+            src="/videos/output.mp4"
+            ref={videoRef}
+            muted
+            playsInline
+            preload="auto"
+          />
+        }
       </div>
     </>
   );
