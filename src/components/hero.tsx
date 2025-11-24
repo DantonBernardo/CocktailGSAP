@@ -3,13 +3,11 @@ import { useGSAP } from '@gsap/react';
 import { SplitText } from 'gsap/SplitText';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRef } from 'react';
-import { useMediaQuery } from 'react-responsive';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
 export default function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const isMobile = useMediaQuery({ maxWidth: 768 });
 
   useGSAP(() => {
     // ---------------------
